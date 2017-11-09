@@ -1,0 +1,35 @@
+{
+  "name": "nuRel",
+  "version": "0.0.1",
+  "description": "Patient Managment System",
+  "main": "server.js",
+  "author": "Santosh Kulkarni",
+  "dependencies": {
+    "async": "^2.1.2",
+    "body-parser": "^1.16.0",
+    "buffer": "^5.0.0",
+    "express": "^4.13.4",
+    "formidable": "^1.0.17",
+    "googleapis": "^14.0.0",
+    "ical-toolkit": "^1.0.9",
+    "log4js": "^1.1.1",
+    "memory-cache": "^0.1.6",
+    "method-override": "^2.3.7",
+    "mime-types": "^2.1.15",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "node-schedule": "^1.2.0",
+    "sendmail": "^1.1.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

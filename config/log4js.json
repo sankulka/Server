@@ -1,0 +1,10 @@
+{
+	"appenders" : [{
+		"type": "file",
+		"filename": "./logs/nurelPMS.log",
+		"pattern": "-dd-MM-yyyy",
+		"alwaysIncludePattern": true,
+		"level": "ALL",
+		"backups": 7
+	}]
+}

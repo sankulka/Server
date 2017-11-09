@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Panacea - Homoeopathic Speciality Center</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=11" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/blueimp-gallery.min.css"/>
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+		
+    </head>	  
+    <body ng-app="WEB">
+        <div class="page-container page-navigation-top-fixed" ng-controller="WEBController as vm">
+
+            <div class="page-content">
+                
+                <ul class="x-navigation x-navigation-horizontal">
+                    <li class="xn-logo">
+                        <a href="#">Panacea(Nurel1)</a>
+						<a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li>
+                        <a href="#!/about">
+						<span class="fa fa-user-md"></span>
+						<span class="xn-text">About Us</span>
+						</a>                        
+                    </li>
+                    <li>
+                        <a href="#!/testimonials" ng-click="testimonials()">
+						<span class="fa fa-star"></span>
+						<span class="xn-text">Testimonials</span>
+						</a>                        
+                    </li>
+                    <li>
+                        <a href="#!/gallery" ng-click="gallery()">
+						<span class="fa fa-picture-o"></span>
+						<span class="xn-text">Gallery</span>
+						</a>                        
+                    </li>					
+                    <li>
+                        <a href="#!/calendar" ng-click="calendar()">
+						<span class="fa fa-calendar"></span>
+						<span class="xn-text">Book Appointment</span>
+						</a>                        
+                    </li>	
+
+					<!--li class="pull-right" ng-show="!vm.isLoggedIn">
+                        <a href="http://localhost:8005/login/nuhomoeo-local" target="_blank">
+						<span class="xn-text">Login</span>
+						<span class="fa fa-sign-in"></span>
+						</a>
+                    </li-->
+					
+					<li class="pull-right">
+                        <a href="#" ng-click="login()">
+						<span class="xn-text">Login</span>
+						<span class="fa fa-sign-in"></span>
+						</a>
+                    </li>
+                </ul>
+				
+				
+
+                <div class="page-content-wrap">                
+					<div ui-view>
+					</div>
+                </div>
+				<div ng-include='"partials/footer.html"'></div>
+            </div>         
+        </div>
+		
+        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-idle/1.3.1/angular-idle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.js"></script>
+
+		<script src="js/controllers/web-module.js"></script>
+		<script src="js/controllers/utils-module.js"></script>
+		<script src="js/services/pms-roles-service.js"></script>
+		<script src="js/controllers/web-controller.js"></script>
+		<script src="js/controllers/testimonials-controller.js"></script>
+		<script src="js/controllers/gallery-controller.js"></script>
+		<script src="js/controllers/appointment-controller.js"></script>
+		<script src="js/controllers/calendar-controller.js"></script>
+		<script src="js/services/pms-api-interceptor.js"></script>
+		<script src="js/services/web-router.js"></script>
+    </body>	
+</html>
+<script>
