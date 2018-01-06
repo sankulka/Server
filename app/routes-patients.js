@@ -169,6 +169,12 @@ module.exports = function (app) {
 				resource: metaData,
 				fields: 'id'
 			}, function(err, folder) {
+
+				// Handle error for null folder
+				if (folder == undefined || folder == null) {
+					console.log ("Error in creating folder: " + err);
+					return;
+				}
 			
 				console.log('New FolderID: ' + folder.id);
 				var masterSheet = cache.cacheService.getMasterSheet(project);
