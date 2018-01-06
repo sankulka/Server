@@ -79,7 +79,13 @@ module.exports = function (app) {
 		// create an incoming form object
 		var form = new formidable.IncomingForm();
 		form.parse(req, function (err, fields, files) {
-			var file = files.file
+			var file = files.file;
+
+			if(file == undefined || file == null) {
+				console.log('Null or undefined file');
+				res.json({});
+			}
+
 			var fileMetadata = {
 				'name': file.name,
 				'parents': [folderDetails.files],
