@@ -74,6 +74,7 @@ module.exports = function (app) {
 		if(folderDetails == undefined || folderDetails == null) {
 			console.log('Chronic cache is not yet initialized.');
 			res.json({});
+			return;
 		}
 		
 		// create an incoming form object
@@ -84,6 +85,7 @@ module.exports = function (app) {
 			if(file == undefined || file == null) {
 				console.log('Null or undefined file');
 				res.json({});
+				return;
 			}
 
 			var fileMetadata = {
