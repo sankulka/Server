@@ -55,8 +55,15 @@ var drive = module.exports = {
 			resource: metaData,
 			fields: 'id'
 		}, function (error, file) {
-			console.log('Copy successful. New Id: ' + file.id);
-			callback(file.id);
+			if (error || file == null || file == undefined)
+			{
+				console.log("Error in copying file: " + error);
+			}
+			else
+			{
+				console.log('Copy successful. New Id: ' + file.id);
+				callback(file.id);
+			}
 		});		
 	}
 };
